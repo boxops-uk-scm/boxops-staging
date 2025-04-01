@@ -1,0 +1,19 @@
+{
+  "extends": "../../babel.config.json",
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    [
+      "@stylexjs/babel-plugin",
+      {
+        "dev": true,
+        "test": false,
+        "unstable_moduleResolution": {
+          "type": "commonJS",
+          "rootDir": "."
+        },
+        "treeshakeCompensation": true
+      }
+    ]
+  ],
+  "presets": [["@babel/preset-react", { "runtime": "automatic" }]]
+}
